@@ -1,6 +1,6 @@
 $imgurURL = Read-Host -Prompt "Enter the URL of the IMGUR album: "
 $page = Invoke-WebRequest -Uri $imgurURL -UseBasicParsing
-if((Test-Path ".\Tuna") -eq $False){
+if((Test-Path ".\Images") -eq $False){
     mkdir ".\Images"
 }
 foreach($image in $page.Images){
